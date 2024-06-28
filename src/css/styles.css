@@ -4,9 +4,21 @@
   | default @import url()
   |============================
 */
+
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
+/* @import url('./vite-promo.css');
+@import url('./header.css'); */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: beige;
+}
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -22,4 +34,113 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+} 
+
+.nav-section {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.nav-welcome {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.nav-button {
+  display: block;
+  background-color: #3246a8;
+  border-radius: 20px;
+  padding: 30px;
+  border: none;
+  color: azure;
+  transition: box-shadow 0.3s ease;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nav-button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.gallery-style {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px; 
+  padding: 30px;
+}
+
+.gallery-image {
+  width: 700px; 
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-image:hover {
+  transform: scale(1.04); 
+}
+
+.box-style {
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+}
+
+.form-section {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+}
+
+.feedback-form {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.feedback-form button[type="submit"] {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  background-color: #3246a8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.feedback-form button[type="submit"]:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(0, 0, 0, 0.7);
 }

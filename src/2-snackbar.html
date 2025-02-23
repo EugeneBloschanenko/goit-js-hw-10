@@ -9,23 +9,35 @@
   </head>
   <body>
 
-    <div class="section">
+    <div class="nav-center">
     <section class="form-section">
       <h1 class="nav-welcome">Welcome to Snackbar!</h1>
 
-      <form class="feedback-form" autocomplete="off">
+      <form class="feedback-form">
         <label>
-          Email
-          <input type="email" name="email" autofocus />
+          Delay (ms)
+          <input type="number" name="delay" required />
         </label>
-        <label>
-          Message
-          <textarea name="message" rows="8"></textarea>
-        </label>
-        <button type="submit">Submit</button>
+      
+        <fieldset class="radio-group">
+          <legend>State</legend>
+          <label>
+            <input type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          <label>
+            <input type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+      
+        <button type="submit" class="js-submit">Create notification</button>
       </form>
     
-      <a href="./index.html"><button type="button" class="nav-button">Go to home</button></a>
+      <section class="nav-section">
+      <a href="./index.html" class="nav-button">Go to home</a>
+      </section>
+      
     </section>
   </div>
   <script src="./js/2-snackbar.js" type="module"></script>
